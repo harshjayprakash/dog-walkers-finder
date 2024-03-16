@@ -1,0 +1,9 @@
+.toolbar .spacer {
+    flex-grow: 1;
+}
+
+@media (min-width: 600px) {
+    .toolbar .menu-button {
+        display: none;
+    }
+}
