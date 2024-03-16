@@ -23,6 +23,12 @@
       },
       "storage": {
         "usersTable": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "dq3l7v5rlnoz2",
+          "type": "manual"
+        }
       }
     }
   }
