@@ -13,7 +13,16 @@
     },
     "categories": {
       "function": {
-        "usersFunction": {}
+        "usersFunction": {
+          "deploymentBucketName": "amplify-waqqly-dev-125221-deployment",
+          "s3Key": "amplify-builds/usersFunction-6d4e5545756932682f55-build.zip"
+        }
+      },
+      "api": {
+        "usersApi": {}
+      },
+      "storage": {
+        "usersTable": {}
       }
     }
   }
