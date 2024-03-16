@@ -1,1 +1,16 @@
-<p>side-nav works!</p>
+<mat-sidenav-container class="sidenav">
+    <mat-sidenav mode="side" class="sidebar-content" [opened]="state.isSideNavShown()">
+        <mat-nav-list>
+            @for (route of routesList; track routesList) {
+                <a mat-list-item [routerLink]="route.path">
+                    <span>
+                        {{ route.title }}
+                    </span>
+                </a>
+            }
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content class="main-content">
+        <ng-content></ng-content>
+    </mat-sidenav-content>
+</mat-sidenav-container>
