@@ -10,6 +10,11 @@
       "StackName": "amplify-waqqly-dev-125221",
       "StackId": "arn:aws:cloudformation:eu-west-2:851725358691:stack/amplify-waqqly-dev-125221/077cabe0-e394-11ee-bbf1-025ad67dd23d",
       "AmplifyAppId": "dq3l7v5rlnoz2"
+    },
+    "categories": {
+      "function": {
+        "usersFunction": {}
+      }
     }
   }
 }
