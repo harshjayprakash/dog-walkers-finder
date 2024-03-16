@@ -1,1 +1,10 @@
-<p>toolbar works!</p>
+<mat-toolbar class="toolbar" >
+    <button mat-icon-button class="menu-button" (click)="onMenuButtonClick($event)">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span>Waqq.ly</span>
+    <span class="spacer"></span>
+    <button mat-icon-button (click)="onAccountButtonClick($event)">
+        <mat-icon>person</mat-icon>
+    </button>
+</mat-toolbar>
