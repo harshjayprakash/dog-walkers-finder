@@ -5,7 +5,12 @@ export class StateService {
     private displaySideNav!: boolean;
 
     constructor() {
-        this.displaySideNav = false;
+        if (window.innerWidth < 600) {
+            this.displaySideNav = false;
+        }
+        else {
+            this.displaySideNav = true;
+        }
     }
 
     isSideNavShown(): boolean {
