@@ -13,6 +13,11 @@ export const VIEWS_MODULE_ROUTES: Routes = [
         path: "",
         title: "Home",
         component: HomeComponent
+    },
+    {
+        path: "find-walkers",
+        title: "Find Dog Walkers",
+        component: FindWalkersComponent
     }
 ];
 
