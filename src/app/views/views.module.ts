@@ -6,6 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCommonModule } from '@angular/material/core';
 import { MatCardModule } from '@angular/material/card';
 import { DataService } from '../core/data.service';
+import { FindWalkersComponent } from './find-walkers/find-walkers.component';
 
 export const VIEWS_MODULE_ROUTES: Routes = [
     {
@@ -17,7 +18,8 @@ export const VIEWS_MODULE_ROUTES: Routes = [
 
 @NgModule({
     declarations: [
-        HomeComponent
+        HomeComponent,
+        FindWalkersComponent
     ],
     imports: [
         CommonModule,
