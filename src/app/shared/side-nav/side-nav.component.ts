@@ -1,7 +1,7 @@
 import { Component, HostListener, OnChanges, SimpleChanges } from '@angular/core';
 import { StateService } from '../../core/state.service';
 import { Routes } from '@angular/router';
-import { routes } from '../../app-routing.module';
+import { VIEWS_MODULE_ROUTES } from '../../views/views.module';
 
 @Component({
     selector: 'app-side-nav',
@@ -12,7 +12,7 @@ export class SideNavComponent {
     routesList!: Routes;
 
     constructor(public state: StateService) {
-        this.routesList = routes;
+        this.routesList = VIEWS_MODULE_ROUTES;
     }
 
     @HostListener('window:resize', ['$event'])
