@@ -16,7 +16,7 @@ export class SideNavComponent {
     }
 
     @HostListener('window:resize', ['$event'])
-    onResize(event: any) {
+    onResize(event: any): void {
         if (event.target.innerWidth > 600) {
             this.state.showSideNav();
         }
