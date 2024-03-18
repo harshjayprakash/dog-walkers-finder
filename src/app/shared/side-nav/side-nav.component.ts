@@ -25,4 +25,11 @@ export class SideNavComponent {
         }
     }
 
+    onNavLinkClick(event: any): void {
+        if (window.innerWidth > 600) {
+            return;
+        }
+        this.state.toggleSideNav();
+    }
+
 }
