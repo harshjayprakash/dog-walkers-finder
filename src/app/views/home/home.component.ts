@@ -7,6 +7,14 @@ import { DataService } from '../../core/data.service';
     styleUrl: './home.component.css'
 })
 export class HomeComponent {
+
+    info?: any;
+
     constructor(private data: DataService) {}
+
+    async getUsers() {
+        this.info = await this.data.getUsers();
+        this.data.AddUser();
+    }
 
 }
