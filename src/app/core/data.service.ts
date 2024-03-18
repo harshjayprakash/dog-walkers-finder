@@ -1,7 +1,10 @@
+import { Inject, Injectable, LOCALE_ID } from '@angular/core';
 import { get, put } from 'aws-amplify/api';
 
 @Injectable()
 export class DataService {
+
+    constructor(@Inject(LOCALE_ID) private locale: String) { }
 
     async getUsers(): Promise<any> {
         try {
