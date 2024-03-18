@@ -6,7 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 export const VIEWS_MODULE_ROUTES: Routes = [
     {
         path: "",
-        title: "Home - Waqq.ly",
+        title: "Home",
         component: HomeComponent
     }
 ];
