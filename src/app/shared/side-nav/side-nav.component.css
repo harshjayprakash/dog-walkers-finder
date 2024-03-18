@@ -1,5 +1,5 @@
 .sidenav {
-    min-height: calc(100vh - 4rem);
+    min-height: calc(100vh - 3.5rem);
 }
 
 .sidenav .sidebar-content {
@@ -11,7 +11,7 @@
 }
 
 @media (min-width: 600px) {
-    .sidenav .main-content {
-        min-height: calc(100vh - 3.5rem);
+    .sidenav {
+        min-height: calc(100vh - 4rem);
     }
 }
