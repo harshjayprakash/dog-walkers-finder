@@ -5,9 +5,7 @@ export class AuthService {
     private userId?: string;
     private loggedIn!: boolean;
 
-    constructor() {
-
-    }
+    constructor() { }
 
     isLoggedIn(): boolean {
         return this.loggedIn;
