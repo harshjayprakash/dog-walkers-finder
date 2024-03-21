@@ -11,6 +11,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { CoreModule } from '../core/core.module';
 import { RouterModule } from '@angular/router';
+import { AuthService } from '../core/services/auth.service';
 
 @NgModule({
     declarations: [
@@ -29,6 +30,6 @@ import { RouterModule } from '@angular/router';
         MatListModule
     ],
     exports: [ToolbarComponent, SideNavComponent],
-    providers: [StateService]
+    providers: [StateService, AuthService]
 })
 export class SharedModule { }
