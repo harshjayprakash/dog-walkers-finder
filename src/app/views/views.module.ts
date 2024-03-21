@@ -26,6 +26,11 @@ export const VIEWS_MODULE_ROUTES: Routes = [
         path: 'login',
         title: 'Log In',
         component: LoginComponent
+    },
+    {
+        path: 'account',
+        title: 'Account',
+        component: AccountComponent
     }
 ];
 
