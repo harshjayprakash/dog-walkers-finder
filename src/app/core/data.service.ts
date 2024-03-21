@@ -9,20 +9,19 @@ export class DataService {
 
     async getUsers(): Promise<any> {
         try {
-            const restOperation = await get({
-                apiName: 'usersApi',
-                path: '/users'
-            });
+            const restOperation = await get(
+                { apiName: 'usersApi', path: '/users' }
+            );
             const response = await restOperation.response;
             return response.body.json();
         }
-        catch (err) {
-            console.log('Failed to retrieve users.');
-        }
+        catch (err) { console.log('Failed to retrieve users.'); }
     }
 
     async AddUser() {
         let idString: string = formatDate(
             Date.now(), 'YYYYMMddTHHmmssSSS', this.locale.toString());
+
+
     }
 }
