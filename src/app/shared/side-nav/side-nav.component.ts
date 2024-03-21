@@ -12,7 +12,10 @@ export class SideNavComponent {
     routesList!: Routes;
 
     constructor(public state: StateService) {
-        this.routesList = VIEWS_MODULE_ROUTES;
+        this.routesList = VIEWS_MODULE_ROUTES.filter(
+            (route) => route.title === 'Home'
+                || route.title === 'Find Dog Walkers'
+        );
     }
 
     @HostListener('window:resize', ['$event'])
