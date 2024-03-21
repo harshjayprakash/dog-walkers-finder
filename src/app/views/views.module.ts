@@ -8,6 +8,7 @@ import { MatCardModule } from '@angular/material/card';
 import { DataService } from '../core/services/data.service';
 import { FindWalkersComponent } from './find-walkers/find-walkers.component';
 import { UsersService } from '../core/services/users.service';
+import { LoginComponent } from './login/login.component';
 
 export const VIEWS_MODULE_ROUTES: Routes = [
     {
@@ -25,7 +26,8 @@ export const VIEWS_MODULE_ROUTES: Routes = [
 @NgModule({
     declarations: [
         HomeComponent,
-        FindWalkersComponent
+        FindWalkersComponent,
+        LoginComponent
     ],
     imports: [
         CommonModule,
