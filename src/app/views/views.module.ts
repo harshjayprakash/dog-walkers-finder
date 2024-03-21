@@ -9,6 +9,7 @@ import { DataService } from '../core/services/data.service';
 import { FindWalkersComponent } from './find-walkers/find-walkers.component';
 import { UsersService } from '../core/services/users.service';
 import { LoginComponent } from './login/login.component';
+import { AccountComponent } from './account/account.component';
 
 export const VIEWS_MODULE_ROUTES: Routes = [
     {
@@ -32,7 +33,8 @@ export const VIEWS_MODULE_ROUTES: Routes = [
     declarations: [
         HomeComponent,
         FindWalkersComponent,
-        LoginComponent
+        LoginComponent,
+        AccountComponent
     ],
     imports: [
         CommonModule,
