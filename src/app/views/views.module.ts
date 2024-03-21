@@ -5,7 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCommonModule } from '@angular/material/core';
 import { MatCardModule } from '@angular/material/card';
-import { DataService } from '../core/data.service';
+import { DataService } from '../core/services/data.service';
 import { FindWalkersComponent } from './find-walkers/find-walkers.component';
 
 export const VIEWS_MODULE_ROUTES: Routes = [

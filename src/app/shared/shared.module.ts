@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
-import { StateService } from '../core/state.service';
+import { StateService } from '../core/services/state.service';
 import { MatCommonModule } from '@angular/material/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
