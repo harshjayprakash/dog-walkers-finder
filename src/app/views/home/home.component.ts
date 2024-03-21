@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DataService } from '../../core/services/data.service';
+import { UsersService } from '../../core/services/users.service';
 
 @Component({
     selector: 'app-home',
@@ -8,13 +8,6 @@ import { DataService } from '../../core/services/data.service';
 })
 export class HomeComponent {
 
-    info?: any;
-
-    constructor(private data: DataService) {}
-
-    async getUsers() {
-        this.info = await this.data.getUsers();
-        this.data.AddUser();
-    }
+    constructor(private users: UsersService) {}
 
 }
