@@ -12,14 +12,19 @@ import { LoginComponent } from './login/login.component';
 
 export const VIEWS_MODULE_ROUTES: Routes = [
     {
-        path: "",
-        title: "Home",
+        path: '',
+        title: 'Home',
         component: HomeComponent
     },
     {
-        path: "find-walkers",
-        title: "Find Dog Walkers",
+        path: 'find-walkers',
+        title: 'Find Dog Walkers',
         component: FindWalkersComponent
+    },
+    {
+        path: 'login',
+        title: 'Log In',
+        component: LoginComponent
     }
 ];
 
