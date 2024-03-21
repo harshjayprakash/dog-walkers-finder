@@ -11,6 +11,7 @@ import { UsersService } from '../core/services/users.service';
 import { LoginComponent } from './login/login.component';
 import { AccountComponent } from './account/account.component';
 import { FormsModule } from '@angular/forms';
+import { MatTabsModule } from '@angular/material/tabs';
 
 export const VIEWS_MODULE_ROUTES: Routes = [
     {
@@ -48,7 +49,8 @@ export const VIEWS_MODULE_ROUTES: Routes = [
         FormsModule,
         MatCommonModule,
         MatIconModule,
-        MatCardModule
+        MatCardModule,
+        MatTabsModule
     ],
     exports: [RouterModule],
     providers: [DataService, UsersService]
