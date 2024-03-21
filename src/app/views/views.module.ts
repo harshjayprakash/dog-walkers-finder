@@ -10,6 +10,7 @@ import { FindWalkersComponent } from './find-walkers/find-walkers.component';
 import { UsersService } from '../core/services/users.service';
 import { LoginComponent } from './login/login.component';
 import { AccountComponent } from './account/account.component';
+import { FormsModule } from '@angular/forms';
 
 export const VIEWS_MODULE_ROUTES: Routes = [
     {
@@ -44,6 +45,7 @@ export const VIEWS_MODULE_ROUTES: Routes = [
     imports: [
         CommonModule,
         RouterModule.forChild(VIEWS_MODULE_ROUTES),
+        FormsModule,
         MatCommonModule,
         MatIconModule,
         MatCardModule
