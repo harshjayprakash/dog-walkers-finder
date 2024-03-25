@@ -7,6 +7,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { ViewsModule } from './views/views.module';
+import { AmplifyAuthenticatorModule } from '@aws-amplify/ui-angular';
 
 @NgModule({
     declarations: [
@@ -17,7 +18,8 @@ import { ViewsModule } from './views/views.module';
         AppRoutingModule,
         CoreModule,
         SharedModule,
-        ViewsModule
+        ViewsModule,
+        AmplifyAuthenticatorModule
     ],
     providers: [
         provideAnimationsAsync()
