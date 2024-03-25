@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
+import { AuthUser, getCurrentUser } from 'aws-amplify/auth';
 
 @Injectable()
 export class AuthService {
-    private userId?: string;
+    private user?: void | AuthUser;
     private loggedIn!: boolean;
 
     constructor() { }
@@ -15,11 +16,13 @@ export class AuthService {
         this.loggedIn = loggedIn;
     }
 
-    getUserId(): string | undefined {
-        return this.userId;
-    }
-
-    setUserId(userid?: string) {
-        this.userId = userid;
+    updateUser() {
+        getCurrentUser().then(result => {
+            this.user = result;
+            this.loggedIn = true;
+        }).catch(err => {
+            console.log('Failed to get authenticated user.');
+            this.loggedIn = false;
+        });
     }
 }
