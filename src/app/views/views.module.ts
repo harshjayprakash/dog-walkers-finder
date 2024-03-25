@@ -17,6 +17,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { AmplifyAuthenticatorModule } from '@aws-amplify/ui-angular';
+import { authGuard } from '../core/guards/auth.guard';
 
 export const VIEWS_MODULE_ROUTES: Routes = [
     {
@@ -37,7 +38,8 @@ export const VIEWS_MODULE_ROUTES: Routes = [
     {
         path: 'account',
         title: 'Account',
-        component: AccountComponent
+        component: AccountComponent,
+        canActivate: [authGuard],
     }
 ];
 
