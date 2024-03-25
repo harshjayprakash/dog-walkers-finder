@@ -19,7 +19,6 @@ export class UsersService {
             );
             const response = await restOperation.response;
             console.log('Amplify API GET Succeeded: ', response);
-            console.log(response.body.json());
             return response.body.json();
         }
         catch (err) { console.log('Failed to retrieve users.'); }
