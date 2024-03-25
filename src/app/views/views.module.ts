@@ -12,6 +12,11 @@ import { LoginComponent } from './login/login.component';
 import { AccountComponent } from './account/account.component';
 import { FormsModule } from '@angular/forms';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { AmplifyAuthenticatorModule } from '@aws-amplify/ui-angular';
 
 export const VIEWS_MODULE_ROUTES: Routes = [
     {
@@ -50,7 +55,12 @@ export const VIEWS_MODULE_ROUTES: Routes = [
         MatCommonModule,
         MatIconModule,
         MatCardModule,
-        MatTabsModule
+        MatTabsModule,
+        MatCheckboxModule,
+        MatInputModule,
+        MatButtonModule,
+        MatFormFieldModule,
+        AmplifyAuthenticatorModule
     ],
     exports: [RouterModule],
     providers: [DataService, UsersService]
