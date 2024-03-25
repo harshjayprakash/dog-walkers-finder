@@ -6,7 +6,9 @@ export class AuthService {
     private user?: void | AuthUser;
     private loggedIn!: boolean;
 
-    constructor() { }
+    constructor() {
+        this.loggedIn = false;
+    }
 
     isLoggedIn(): boolean {
         return this.loggedIn;
