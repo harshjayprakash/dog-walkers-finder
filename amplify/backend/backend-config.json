@@ -1,5 +1,19 @@
 {
   "api": {
+    "dogsApi": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "dogsFunction"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
     "usersApi": {
       "dependsOn": [
         {
@@ -44,6 +58,25 @@
     }
   },
   "function": {
+    "dogsFunction": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "dogsTable"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
     "usersFunction": {
       "build": true,
       "dependsOn": [
@@ -106,6 +139,10 @@
     }
   },
   "storage": {
+    "dogsTable": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
+    },
     "usersTable": {
       "providerPlugin": "awscloudformation",
       "service": "DynamoDB"
