@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../../core/services/auth.service';
 
 @Component({
     selector: 'app-find-walkers',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
     styleUrl: './find-walkers.component.css'
 })
 export class FindWalkersComponent {
+
+    constructor (public auth: AuthService) { }
 
 }
