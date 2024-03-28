@@ -18,25 +18,35 @@ export class UsersService {
                 { ...this.apiDetails }
             );
             const response = await restOperation.response;
-            console.log('Amplify API GET Succeeded: ', response);
+            console.log('[Users Service] Amplify API GET Succeeded: ', response);
             return response.body.json();
         }
-        catch (err) { console.log('Failed to retrieve users.'); }
+        catch (err) { console.log('[Users Service] Amplify API GET Failed.'); }
     }
 
-    async addUser(username: string, password: string): Promise<void> {
-        let idString: string = formatDate(
-            Date.now(), 'YYYYMMddTHHmmssSSS', this.locale.toString());
+    async addUser(
+        id: string | undefined, username: string, address: string,
+        dogWalker: boolean, dogs: string[]
+    ): Promise<any> {
+
+        const idCheck = () => {
+            return (id === undefined)
+            ? (formatDate(Date.now(), 'YYYYMMddTHHmmssSSS', this.locale.toString()))
+            : id.toString();
+        };
+
         try {
             const restOperation = await put({
                 ...this.apiDetails,
-                options: { body:
-                    { id: idString, username, password: SHA256(password).toString() }
+                options: {
+                    body: {
+                        id: idCheck(), username, address, isDogWalker: dogWalker, dogs
+                    }
                 }
             });
             const response = await restOperation.response;
-            console.log('Amplify API PUT Succeeded: ', response);
+            console.log('[Users Service] Amplify API PUT Succeeded: ', response);
         }
-        catch (err) { console.log('Failed to add user.'); }
+        catch (err) { console.log('[Users Service] Amplify API PUT Failed.'); }
     }
 }
