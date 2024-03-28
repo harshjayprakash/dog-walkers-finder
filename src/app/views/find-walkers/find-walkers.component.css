@@ -1,0 +1,11 @@
+.search {
+    display: flex;
+}
+
+.search > mat-form-field {
+    width: 500px;
+}
+
+.search > .spacer {
+    flex-grow: 1;
+}
