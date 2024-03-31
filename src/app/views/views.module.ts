@@ -19,6 +19,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { AmplifyAuthenticatorModule } from '@aws-amplify/ui-angular';
 import { authGuard } from '../core/guards/auth.guard';
 import { ManageDogsComponent } from './manage-dogs/manage-dogs.component';
+import { AddDogComponent } from './add-dog/add-dog.component';
 
 export const VIEWS_MODULE_ROUTES: Routes = [
     {
@@ -56,7 +57,8 @@ export const VIEWS_MODULE_ROUTES: Routes = [
         FindWalkersComponent,
         LoginComponent,
         AccountComponent,
-        ManageDogsComponent
+        ManageDogsComponent,
+        AddDogComponent
     ],
     imports: [
         CommonModule,
