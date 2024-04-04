@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { UsersService } from '../../core/services/users.service';
+import { UsersService } from '../../core/services/storage/users.service';
 
 @Component({
     selector: 'app-home',
@@ -9,5 +9,11 @@ import { UsersService } from '../../core/services/users.service';
 export class HomeComponent {
 
     constructor(private users: UsersService) {}
+
+    onClick() {
+        this.users.getUsers().then(result => {
+            console.log(result);
+        }).catch(err => console.log(err));
+    }
 
 }
