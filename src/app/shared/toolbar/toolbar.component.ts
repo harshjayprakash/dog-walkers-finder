@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { StateService } from '../../core/services/state.service';
+import { StateService } from '../../core/services/ui/state.service';
 import { Router } from '@angular/router';
-import { AuthService } from '../../core/services/auth.service';
+import { AuthService } from '../../core/services/auth/auth.service';
 
 @Component({
     selector: 'app-toolbar',

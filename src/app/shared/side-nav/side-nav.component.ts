@@ -1,8 +1,8 @@
 import { Component, HostListener, OnChanges, SimpleChanges } from '@angular/core';
-import { StateService } from '../../core/services/state.service';
+import { StateService } from '../../core/services/ui/state.service';
 import { Routes } from '@angular/router';
 import { VIEWS_MODULE_ROUTES } from '../../views/views.module';
-import { AuthService } from '../../core/services/auth.service';
+import { AuthService } from '../../core/services/auth/auth.service';
 
 @Component({
     selector: 'app-side-nav',

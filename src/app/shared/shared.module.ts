@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
-import { StateService } from '../core/services/state.service';
+import { StateService } from '../core/services/ui/state.service';
 import { MatCommonModule } from '@angular/material/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -11,7 +11,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { CoreModule } from '../core/core.module';
 import { RouterModule } from '@angular/router';
-import { AuthService } from '../core/services/auth.service';
+import { AuthService } from '../core/services/auth/auth.service';
 
 @NgModule({
     declarations: [
