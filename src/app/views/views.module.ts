@@ -5,9 +5,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCommonModule } from '@angular/material/core';
 import { MatCardModule } from '@angular/material/card';
-import { DataService } from '../core/services/data.service';
 import { FindWalkersComponent } from './find-walkers/find-walkers.component';
-import { UsersService } from '../core/services/users.service';
+import { UsersService } from '../core/services/storage/users.service';
 import { LoginComponent } from './login/login.component';
 import { AccountComponent } from './account/account.component';
 import { FormsModule } from '@angular/forms';
@@ -75,6 +74,6 @@ export const VIEWS_MODULE_ROUTES: Routes = [
         AmplifyAuthenticatorModule
     ],
     exports: [RouterModule],
-    providers: [DataService, UsersService]
+    providers: [UsersService]
 })
 export class ViewsModule { }
