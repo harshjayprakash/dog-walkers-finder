@@ -26,13 +26,16 @@ export class AccountComponent {
     }
 
     updateUserInformation(): void {
-        this.users.addUser(
-            this.userId,
-            this.username || 'not specified',
-            this.postalCode || 'not specified',
-            this.dogWalker || false,
-            []
-        );
+        if (this.userId === undefined) { return; }
+        const user: User = {
+            id: this.userId?.toString(),
+            username: this.username || 'not specified',
+            name: this.name || 'not specified',
+            address: this.postalCode || 'not specified',
+            isDogWalker: this.dogWalker || false,
+            dogs: []
+        }
+        this.users.addUser(user);
     }
 
     logOut(): void {
