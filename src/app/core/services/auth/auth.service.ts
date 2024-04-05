@@ -25,10 +25,7 @@ export class AuthService {
         getCurrentUser().then(result => {
             this.user = result.userId;
             this.loggedIn = true;
-        }).catch(err => {
-            console.log('Failed to get authenticated user.');
-            this.loggedIn = false;
-        });
+        }).catch(_err => { this.loggedIn = false; });
     }
 
     async logOutUser(): Promise<void> {
