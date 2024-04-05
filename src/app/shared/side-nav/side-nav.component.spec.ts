@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SideNavComponent } from './side-nav.component';
 
-describe('SideNavComponent', () => {
+describe('Shared.SideNavComponent', () => {
     let component: SideNavComponent;
     let fixture: ComponentFixture<SideNavComponent>;
 

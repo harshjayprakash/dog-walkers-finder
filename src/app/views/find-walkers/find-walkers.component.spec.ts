@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FindWalkersComponent } from './find-walkers.component';
 
-describe('FindWalkersComponent', () => {
+describe('Views.FindWalkersComponent', () => {
     let component: FindWalkersComponent;
     let fixture: ComponentFixture<FindWalkersComponent>;
 

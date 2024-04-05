@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 
 import { DynamoService } from './dynamo.service';
 
-describe('DynamoService', () => {
+describe('Core.Services.Storage.DynamoService', () => {
   let service: DynamoService;
 
   beforeEach(() => {
