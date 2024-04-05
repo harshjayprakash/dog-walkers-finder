@@ -14,16 +14,7 @@ export class UsersService extends DynamoService {
         return await this.dynamoGet();
     }
 
-    async addUser(
-        id: string | undefined, username: string, address: string,
-        dogWalker: boolean, dogs: string[]
-    ): Promise<any> {
-        const idCheck = () => {
-            return (id === undefined)
-            ? (formatDate(Date.now(), 'YYYYMMddTHHmmssSSS', this.locale.toString()))
-            : id.toString();
-        };
-        return await this.dynamoPut(
-            { id: idCheck(), username, address, isDogWalker: dogWalker, dogs })
+    async addUser(user: User): Promise<any> {
+        return await this.dynamoPut({ ...user })
     }
 }
