@@ -23,6 +23,19 @@ export class AccountComponent {
     ) {
         auth.updateUser();
         this.userId = auth.getUserId();
+        this.users.getUsers().then(result => {
+            const _users: User[] = result;
+            _users.forEach(user => {
+                if (user.id === this.userId) {
+                    this.username = user.username;
+                    this.name = user.name;
+                    this.postalCode = user.address;
+                    this.dogWalker = user.isDogWalker;
+                }
+            });
+        }).catch(err => {
+            console.log('[Account Component] Failed to retrieve users: ', err)
+        });
     }
 
     updateUserInformation(): void {
