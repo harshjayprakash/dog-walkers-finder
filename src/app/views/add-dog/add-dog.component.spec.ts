@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { AddDogComponent } from './add-dog.component';
 
 describe('Views.AddDogComponent', () => {

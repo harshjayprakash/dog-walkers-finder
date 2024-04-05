@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { SideNavComponent } from './side-nav.component';
 
 describe('Shared.SideNavComponent', () => {
@@ -9,8 +8,7 @@ describe('Shared.SideNavComponent', () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             declarations: [SideNavComponent]
-        })
-            .compileComponents();
+        }).compileComponents();
 
         fixture = TestBed.createComponent(SideNavComponent);
         component = fixture.componentInstance;

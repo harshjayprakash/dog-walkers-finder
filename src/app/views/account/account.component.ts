@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { type User } from '../../core/model/user';
 import { AuthService } from '../../core/services/auth/auth.service';
 import { UsersService } from '../../core/services/storage/users.service';
-import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-account',
@@ -17,9 +18,7 @@ export class AccountComponent {
 
 
     constructor(
-        private auth: AuthService,
-        private users: UsersService,
-        private router: Router
+        private auth: AuthService, private users: UsersService, private router: Router
     ) {
         auth.updateUser();
         this.userId = auth.getUserId();

@@ -1,7 +1,7 @@
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { AppModule } from './app/app.module';
 import { Amplify } from 'aws-amplify';
 import amplifyconfig from './amplifyconfiguration.json';
+import { AppModule } from './app/app.module';
 
 Amplify.configure(amplifyconfig);
 

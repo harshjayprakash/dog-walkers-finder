@@ -1,25 +1,25 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeComponent } from './home/home.component';
-import { RouterModule, Routes } from '@angular/router';
-import { MatIconModule } from '@angular/material/icon';
-import { MatCommonModule } from '@angular/material/core';
-import { MatCardModule } from '@angular/material/card';
-import { FindWalkersComponent } from './find-walkers/find-walkers.component';
-import { UsersService } from '../core/services/storage/users.service';
-import { LoginComponent } from './login/login.component';
-import { AccountComponent } from './account/account.component';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { MatTabsModule } from '@angular/material/tabs';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatCommonModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatTabsModule } from '@angular/material/tabs';
+import { RouterModule, Routes } from '@angular/router';
 import { AmplifyAuthenticatorModule } from '@aws-amplify/ui-angular';
 import { authGuard } from '../core/guards/auth.guard';
 import { DogService } from '../core/services/storage/dog.service';
-import { ManageDogsComponent } from './manage-dogs/manage-dogs.component';
+import { UsersService } from '../core/services/storage/users.service';
+import { AccountComponent } from './account/account.component';
 import { AddDogComponent } from './add-dog/add-dog.component';
+import { FindWalkersComponent } from './find-walkers/find-walkers.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { ManageDogsComponent } from './manage-dogs/manage-dogs.component';
 
 export const VIEWS_MODULE_ROUTES: Routes = [
     {

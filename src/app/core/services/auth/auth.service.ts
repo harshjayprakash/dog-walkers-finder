@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
 import { getCurrentUser, signOut } from 'aws-amplify/auth';
-import { Hub } from 'aws-amplify/utils';
 
 @Injectable()
 export class AuthService {

@@ -1,5 +1,5 @@
-import { formatDate } from '@angular/common';
 import { Inject, Injectable, LOCALE_ID } from '@angular/core';
+import { User } from '../../model/user';
 import { DynamoService } from './dynamo.service';
 
 @Injectable()
