@@ -17,10 +17,6 @@ export class AuthService {
         return this.loggedIn;
     }
 
-    setLoggedIn(loggedIn: boolean): void {
-        this.loggedIn = loggedIn;
-    }
-
     getUserId(): string | undefined {
         return this.user;
     }
