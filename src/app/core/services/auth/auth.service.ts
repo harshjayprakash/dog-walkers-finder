@@ -8,7 +8,7 @@ export class AuthService {
     private user?: string;
     private loggedIn!: boolean;
 
-    constructor(private router: Router) {
+    constructor() {
         this.loggedIn = false;
         this.updateUser();
     }
