@@ -17,6 +17,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { AmplifyAuthenticatorModule } from '@aws-amplify/ui-angular';
 import { authGuard } from '../core/guards/auth.guard';
+import { DogService } from '../core/services/storage/dog.service';
 import { ManageDogsComponent } from './manage-dogs/manage-dogs.component';
 import { AddDogComponent } from './add-dog/add-dog.component';
 
@@ -74,6 +75,6 @@ export const VIEWS_MODULE_ROUTES: Routes = [
         AmplifyAuthenticatorModule
     ],
     exports: [RouterModule],
-    providers: [UsersService]
+    providers: [UsersService, DogService]
 })
 export class ViewsModule { }
