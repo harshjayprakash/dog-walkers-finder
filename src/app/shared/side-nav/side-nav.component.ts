@@ -20,9 +20,6 @@ export class SideNavComponent {
             (route) => route.title === 'Home'
                 || route.title === 'Find Dog Walkers'
                 || route.title === 'Manage Dogs'
-        ).filter((route) =>
-            this.auth.isLoggedIn()
-            || route.title !== 'Manage Dogs'
         );
     }
 
