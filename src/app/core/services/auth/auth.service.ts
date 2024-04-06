@@ -27,11 +27,7 @@ export class AuthService {
     }
 
     async logOutUser(): Promise<void> {
-        try {
-            await signOut();
-        }
-        catch (err) {
-            console.log('[Auth Service] Error Signing Out: ', err);
-        }
+        try { await signOut(); }
+        catch (err) { console.log('[Auth Service] Error Signing Out: ', err); }
     }
 }
