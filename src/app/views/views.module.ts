@@ -11,7 +11,6 @@ import { MatInputModule } from '@angular/material/input';
 import { MatTabsModule } from '@angular/material/tabs';
 import { RouterModule, Routes } from '@angular/router';
 import { AmplifyAuthenticatorModule } from '@aws-amplify/ui-angular';
-import { authGuard } from '../core/guards/auth.guard';
 import { DogService } from '../core/services/storage/dog.service';
 import { UsersService } from '../core/services/storage/users.service';
 import { AccountComponent } from './account/account.component';
@@ -35,19 +34,12 @@ export const VIEWS_MODULE_ROUTES: Routes = [
     {
         path: 'manage-dogs',
         title: 'Manage Dogs',
-        component: ManageDogsComponent,
-        canActivate: [authGuard]
-    },
-    {
-        path: 'login',
-        title: 'Log In',
-        component: LoginComponent
+        component: ManageDogsComponent
     },
     {
         path: 'account',
         title: 'Account',
-        component: AccountComponent,
-        canActivate: [authGuard],
+        component: AccountComponent
     }
 ];
 
