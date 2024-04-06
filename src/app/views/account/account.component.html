@@ -1,33 +1,41 @@
-<h1>My Account</h1>
+<div class="amplify-auth__wrapper">
+    <amplify-authenticator (onSignIn)="updateData()">
+        <ng-template amplifySlot="authenticated" let-user="user" let-signOut="signOut">
+            <h1>My Account</h1>
 
-<ng-form class="form">
-    <p>User ID (Do Not Share This): {{ userId || 'undefined' }} </p>
+            <ng-form class="form">
+                <p>User ID (Do Not Share This): {{ userId || 'undefined' }} </p>
 
-    <mat-form-field>
-        <mat-label>Username</mat-label>
-        <input name="username" matInput type="text" [(ngModel)]="username">
-    </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Username</mat-label>
+                    <input name="username" matInput type="text" [(ngModel)]="username">
+                </mat-form-field>
 
-    <mat-form-field>
-        <mat-label>Name</mat-label>
-        <input name="name" matInput type="text" [(ngModel)]="name">
-    </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Name</mat-label>
+                    <input name="name" matInput type="text" [(ngModel)]="name">
+                </mat-form-field>
 
-    <mat-form-field>
-        <mat-label>Postal Code</mat-label>
-        <input name="postalCode" matInput type="text" [(ngModel)]="postalCode">
-    </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Postal Code</mat-label>
+                    <input name="postalCode" matInput type="text" [(ngModel)]="postalCode">
+                </mat-form-field>
 
-    <mat-checkbox name="isdogwalker" [(ngModel)]="dogWalker">Registered As Dog Walker</mat-checkbox>
+                <mat-checkbox name="isdogwalker" [(ngModel)]="dogWalker">Registered As Dog Walker</mat-checkbox>
 
-    <br /> <br />
-    <button mat-raised-button color="accent" (click)="updateUserInformation()">
-        Update Information
-    </button>
+                <br /> <br />
+                <button mat-raised-button color="accent" (click)="updateUserInformation()">
+                    Update Information
+                </button>
 
-</ng-form>
-<br/>
-<br/>
-<button mat-raised-button color="primary" (click)="logOut()">
-    Log Out
-</button>
+            </ng-form>
+            <br/>
+            <br/>
+            <button mat-raised-button color="primary" (click)="logOut()">
+                Log Out
+            </button>
+        </ng-template>
+    </amplify-authenticator>
+</div>
+
+
