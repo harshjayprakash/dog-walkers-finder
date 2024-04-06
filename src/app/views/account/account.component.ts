@@ -20,8 +20,12 @@ export class AccountComponent {
     constructor(
         private auth: AuthService, private users: UsersService, private router: Router
     ) {
-        auth.updateUser();
-        this.userId = auth.getUserId();
+        this.updateData();
+    }
+
+    updateData(): void {
+        this.auth.updateUser();
+        this.userId = this.auth.getUserId();
         this.users.getUsers().then(result => {
             const _users: User[] = result;
             _users.forEach(user => {
@@ -53,7 +57,6 @@ export class AccountComponent {
     logOut(): void {
         this.auth.logOutUser();
         this.auth.updateUser();
-        this.router.navigateByUrl('/');
         window.location.reload();
     }
 
