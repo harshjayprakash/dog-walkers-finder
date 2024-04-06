@@ -1,11 +1,11 @@
-import { Inject, Injectable, LOCALE_ID } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { User } from '../../model/user';
 import { DynamoService } from './dynamo.service';
 
 @Injectable()
 export class UsersService extends DynamoService {
 
-    constructor(@Inject(LOCALE_ID) private locale: String) {
+    constructor() {
         super();
         this.apiDetails = { apiName: 'usersApi', path: '/users' };
     }
