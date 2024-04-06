@@ -17,7 +17,6 @@ import { AccountComponent } from './account/account.component';
 import { AddDogComponent } from './add-dog/add-dog.component';
 import { FindWalkersComponent } from './find-walkers/find-walkers.component';
 import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
 import { ManageDogsComponent } from './manage-dogs/manage-dogs.component';
 
 export const VIEWS_MODULE_ROUTES: Routes = [
@@ -47,7 +46,6 @@ export const VIEWS_MODULE_ROUTES: Routes = [
     declarations: [
         HomeComponent,
         FindWalkersComponent,
-        LoginComponent,
         AccountComponent,
         ManageDogsComponent,
         AddDogComponent
