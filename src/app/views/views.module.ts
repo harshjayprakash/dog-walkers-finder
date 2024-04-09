@@ -15,10 +15,10 @@ import { DogService } from '../core/services/storage/dog.service';
 import { UsersService } from '../core/services/storage/users.service';
 import { AccountComponent } from './account/account.component';
 import { AddDogComponent } from './add-dog/add-dog.component';
+import { CognitoAuthComponent } from './cognito-auth/cognito-auth.component';
 import { FindWalkersComponent } from './find-walkers/find-walkers.component';
 import { HomeComponent } from './home/home.component';
 import { ManageDogsComponent } from './manage-dogs/manage-dogs.component';
-import { CognitoAuthComponent } from './cognito-auth/cognito-auth.component';
 
 export const VIEWS_MODULE_ROUTES: Routes = [
     {
@@ -35,6 +35,11 @@ export const VIEWS_MODULE_ROUTES: Routes = [
         path: 'manage-dogs',
         title: 'Manage Dogs',
         component: ManageDogsComponent
+    },
+    {
+        path: 'authenticate',
+        title: 'Authentication',
+        component: CognitoAuthComponent
     },
     {
         path: 'account',
