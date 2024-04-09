@@ -18,6 +18,7 @@ import { AddDogComponent } from './add-dog/add-dog.component';
 import { FindWalkersComponent } from './find-walkers/find-walkers.component';
 import { HomeComponent } from './home/home.component';
 import { ManageDogsComponent } from './manage-dogs/manage-dogs.component';
+import { CognitoAuthComponent } from './cognito-auth/cognito-auth.component';
 
 export const VIEWS_MODULE_ROUTES: Routes = [
     {
@@ -48,7 +49,8 @@ export const VIEWS_MODULE_ROUTES: Routes = [
         FindWalkersComponent,
         AccountComponent,
         ManageDogsComponent,
-        AddDogComponent
+        AddDogComponent,
+        CognitoAuthComponent
     ],
     imports: [
         CommonModule,
