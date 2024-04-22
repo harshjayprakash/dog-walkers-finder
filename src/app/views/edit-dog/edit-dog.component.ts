@@ -1,7 +1,8 @@
 import { formatDate } from '@angular/common';
 import { Component, Inject, LOCALE_ID } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Dog } from '../../core/model/dog';
+import { AuthService } from '../../core/services/auth/auth.service';
 import { DogService } from '../../core/services/storage/dog.service';
 
 @Component({
@@ -19,6 +20,7 @@ export class EditDogComponent {
 
     constructor(
         private router: Router,
+        private activatedroute: ActivatedRoute,
         @Inject(LOCALE_ID) private locale: string,
         private dogs: DogService,
         private auth: AuthService
@@ -27,6 +29,20 @@ export class EditDogComponent {
             this.editMode = false;
         } else {
             this.editMode = true;
+            this.activatedroute.params.forEach(params => {
+                this.id = params['id']
+            });
+            this.dogs.getDogs().then(result => {
+                const dogList: Dog[] = result;
+                dogList.filter(dog => dog.id === this.id).forEach(dog => {
+                    this.name = dog.name;
+                    this.details = dog.details;
+                    this.special = dog.special;
+                });
+            }).catch(error => console.log('Failed to retrieve dogs: ', error));
+        }
+    }
+
     goBack(): void {
         this.router.navigateByUrl('/dogs/manage');
     }
