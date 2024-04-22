@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Dog } from '../../core/model/dog';
+import { AuthService } from '../../core/services/auth/auth.service';
+import { DogService } from '../../core/services/storage/dog.service';
 
 @Component({
     selector: 'app-manage-dogs',
@@ -7,8 +10,11 @@ import { Component } from '@angular/core';
 })
 export class ManageDogsComponent {
     elementData!: Dog[];
+
     constructor(
         private dogs: DogService,
+        private auth: AuthService
+    ) {
         this.dogs.getDogs().then(result => {
             if (auth.getUserId() !== undefined) {
                 let dogList: Dog[] = result;
