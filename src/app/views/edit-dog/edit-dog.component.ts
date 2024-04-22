@@ -16,6 +16,7 @@ export class EditDogComponent {
     constructor(
         private router: Router,
         @Inject(LOCALE_ID) private locale: string,
+        private dogs: DogService
     ) {
         if (router.url === '/dog/add') {
             this.editMode = false;
