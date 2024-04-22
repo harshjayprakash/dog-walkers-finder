@@ -29,4 +29,9 @@ export class EditDogComponent {
         this.router.navigateByUrl('/dogs/manage');
     }
 
+    updateButtonClick(_event: MouseEvent): void {
+        if (this.editMode) { this.updateExistingDog(); }
+        else { this.addNewDog(); }
+    }
+
 }
