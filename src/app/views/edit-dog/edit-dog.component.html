@@ -1,1 +1,44 @@
-<p>edit-dog works!</p>
+<h1>
+    @if (editMode) { Edit }
+    @else { Add }
+    Dog
+</h1>
+
+<ng-form class="form">
+    @if (editMode) {
+        <p>Dog ID: </p>
+    }
+
+    <mat-form-field>
+        <mat-label>Name of Dog</mat-label>
+        <input name="dogName" matInput type="text" required [(ngModel)]="name">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Details</mat-label>
+        <textarea name="details" matInput [(ngModel)]="details"></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Any specials requirements</mat-label>
+        <textarea name="specials" matInput [(ngModel)]="special"></textarea>
+    </mat-form-field>
+
+
+    <div class="button-wrapper">
+        <button mat-flat-button color="accent" (click)="updateButtonClick($event)">
+            @if (editMode) {
+                Update Information
+            }
+            @else {
+                Add Dog
+            }
+        </button>
+
+        <button mat-flat-button (click)="cancelButtonClick($event)">
+            Cancel
+        </button>
+    </div>
+
+
+</ng-form>
