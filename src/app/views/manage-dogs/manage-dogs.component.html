@@ -5,3 +5,14 @@
     <button routerLink="/dog/add" mat-button color="accent">Add Dog</button>
 </article>
 
+<br/>
+<br/>
+
+<section>
+    @for (element of elementData; track elementData) {
+        <app-dog-card
+            [name]="element.name"
+            [details]="element.details"
+            [contentid]="element.id" />
+    }
+</section>
