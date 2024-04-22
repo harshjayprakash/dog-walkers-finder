@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './edit-dog.component.css'
 })
 export class EditDogComponent {
+    id?: string;
+    name?: string;
+    details?: string;
+    special?: string;
 
 }
