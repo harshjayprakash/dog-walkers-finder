@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './edit-dog.component.css'
 })
 export class EditDogComponent {
+    editMode!: boolean;
+
     id?: string;
     name?: string;
     details?: string;
