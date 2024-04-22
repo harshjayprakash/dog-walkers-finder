@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
 export class ManageDogsComponent {
     elementData!: Dog[];
     constructor(
+        private dogs: DogService,
+        private auth: AuthService,
+        private router: Router
+    ) {
     }
 }
