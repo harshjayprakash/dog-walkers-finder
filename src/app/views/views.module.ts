@@ -8,6 +8,7 @@ import { MatCommonModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { RouterModule, Routes } from '@angular/router';
 import { AmplifyAuthenticatorModule } from '@aws-amplify/ui-angular';
@@ -15,7 +16,6 @@ import { authGuard } from '../core/guards/auth.guard';
 import { DogService } from '../core/services/storage/dog.service';
 import { UsersService } from '../core/services/storage/users.service';
 import { AccountComponent } from './account/account.component';
-import { AddDogComponent } from './add-dog/add-dog.component';
 import { CognitoAuthComponent } from './cognito-auth/cognito-auth.component';
 import { EditDogComponent } from './edit-dog/edit-dog.component';
 import { FindWalkersComponent } from './find-walkers/find-walkers.component';
@@ -70,7 +70,6 @@ export const VIEWS_MODULE_ROUTES: Routes = [
         FindWalkersComponent,
         AccountComponent,
         ManageDogsComponent,
-        AddDogComponent,
         CognitoAuthComponent,
         EditDogComponent
     ],
@@ -86,6 +85,7 @@ export const VIEWS_MODULE_ROUTES: Routes = [
         MatInputModule,
         MatButtonModule,
         MatFormFieldModule,
+        MatTableModule,
         AmplifyAuthenticatorModule
     ],
     exports: [RouterModule],
