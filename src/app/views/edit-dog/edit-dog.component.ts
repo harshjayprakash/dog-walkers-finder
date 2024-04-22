@@ -1,9 +1,13 @@
-import { Component } from '@angular/core';
+import { formatDate } from '@angular/common';
+import { Component, Inject, LOCALE_ID } from '@angular/core';
+import { Router } from '@angular/router';
+import { Dog } from '../../core/model/dog';
+import { DogService } from '../../core/services/storage/dog.service';
 
 @Component({
-  selector: 'app-edit-dog',
-  templateUrl: './edit-dog.component.html',
-  styleUrl: './edit-dog.component.css'
+    selector: 'app-edit-dog',
+    templateUrl: './edit-dog.component.html',
+    styleUrl: './edit-dog.component.css'
 })
 export class EditDogComponent {
     editMode!: boolean;
@@ -49,6 +53,10 @@ export class EditDogComponent {
         };
 
         this.dogs.addDog(dog);
+    }
+
+    updateExistingDog(): void {
+
     }
 
 }
