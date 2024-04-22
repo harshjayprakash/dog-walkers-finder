@@ -34,16 +34,22 @@ export const VIEWS_MODULE_ROUTES: Routes = [
         component: FindWalkersComponent
     },
     {
-        path: 'manage-dogs',
+        path: 'dogs/manage',
         title: 'Manage Dogs',
         component: ManageDogsComponent,
         canActivate: [authGuard]
     },
     {
-        path: 'edit-dog',
+        path: 'dog/:id',
         title: 'Edit Dog',
         component: EditDogComponent,
         canActivate: [authGuard]
+    },
+    {
+        path: 'dog/add',
+        title: 'Add Dog',
+        component: EditDogComponent,
+        canActivate: [authGuard],
     },
     {
         path: 'authenticate',
