@@ -20,7 +20,8 @@ export class EditDogComponent {
     constructor(
         private router: Router,
         @Inject(LOCALE_ID) private locale: string,
-        private dogs: DogService
+        private dogs: DogService,
+        private auth: AuthService
     ) {
         if (router.url === '/dog/add') {
             this.editMode = false;
