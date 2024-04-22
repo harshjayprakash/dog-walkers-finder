@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 import { MatCommonModule } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
@@ -10,9 +11,9 @@ import { RouterModule } from '@angular/router';
 import { CoreModule } from '../core/core.module';
 import { AuthService } from '../core/services/auth/auth.service';
 import { StateService } from '../core/services/ui/state.service';
+import { DynamicCardComponent } from './dynamic-card/dynamic-card.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
-import { DynamicCardComponent } from './dynamic-card/dynamic-card.component';
 
 @NgModule({
     declarations: [
@@ -29,7 +30,8 @@ import { DynamicCardComponent } from './dynamic-card/dynamic-card.component';
         MatIconModule,
         MatButtonModule,
         MatSidenavModule,
-        MatListModule
+        MatListModule,
+        MatCardModule
     ],
     exports: [ToolbarComponent, SideNavComponent],
     providers: [StateService, AuthService]
