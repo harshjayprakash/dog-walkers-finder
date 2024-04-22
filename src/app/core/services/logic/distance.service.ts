@@ -7,7 +7,7 @@ export class DistanceService {
     constructor(private http: HttpClient) { }
 
     isValidPostalCode(postalCode: string) {
-
+        this.http.get(`api.postalcode.io/postcodes/${postalCode}/validate`);
     }
 };
 
