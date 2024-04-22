@@ -27,10 +27,7 @@ export class EditDogComponent {
             this.editMode = false;
         } else {
             this.editMode = true;
-        }
-    }
-
-    cancelButtonClick(_event: MouseEvent): void {
+    goBack(): void {
         this.router.navigateByUrl('/dogs/manage');
     }
 
@@ -58,6 +55,7 @@ export class EditDogComponent {
         };
 
         this.dogs.addDog(dog);
+        this.goBack();
     }
 
     updateExistingDog(): void {
