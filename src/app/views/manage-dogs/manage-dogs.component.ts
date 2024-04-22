@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
     styleUrl: './manage-dogs.component.css'
 })
 export class ManageDogsComponent {
-
+    elementData!: Dog[];
+    constructor(
+    }
 }
