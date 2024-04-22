@@ -14,11 +14,10 @@ export class ToolbarComponent {
         private router: Router, private state: StateService, private auth: AuthService
     ) { }
 
-    onAccountButtonClick(event: any): void {
-        this.router.navigateByUrl('/account');
+    onAccountButtonClick(_event: any): void {
     }
 
-    onMenuButtonClick(event: any): void {
+    onMenuButtonClick(_event: any): void {
         this.state.toggleSideNav();
     }
 
