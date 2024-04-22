@@ -1,0 +1,13 @@
+<mat-card>
+    <mat-card-title-group>
+        <mat-card-title>
+            <span mat-card-title>{{ name }}</span>
+        </mat-card-title>
+    </mat-card-title-group>
+    <mat-card-content>
+        <p>{{ details }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button (click)="handleEditButton($event)">Edit</button>
+    </mat-card-actions>
+</mat-card>
