@@ -34,4 +34,21 @@ export class EditDogComponent {
         else { this.addNewDog(); }
     }
 
+    addNewDog(): void {
+        if (this.name === undefined) {
+            alert('The name is required.');
+        }
+
+        this.id = formatDate(Date.now(), 'YYYYMMddTHHmmssSSS', this.locale.toString());
+
+        const dog: Dog = {
+            id: this.id,
+            name: this.name || 'undefined',
+            details: this.details || 'No Details Provided',
+            special: this.special || 'No Details Provided'
+        };
+
+        this.dogs.addDog(dog);
+    }
+
 }
