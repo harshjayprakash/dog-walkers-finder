@@ -15,7 +15,7 @@ export class DogService extends DynamoService {
         return await this.dynamoGet();
     }
 
-    async addUser(dog: Dog): Promise<any> {
+    async addDog(dog: Dog): Promise<any> {
         return await this.dynamoPut({ ...dog });
     }
 }
