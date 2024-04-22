@@ -24,4 +24,9 @@ export class EditDogComponent {
             this.editMode = true;
         }
     }
+
+    cancelButtonClick(_event: MouseEvent): void {
+        this.router.navigateByUrl('/dogs/manage');
+    }
+
 }
