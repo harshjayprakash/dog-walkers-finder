@@ -11,15 +11,13 @@ import { RouterModule } from '@angular/router';
 import { CoreModule } from '../core/core.module';
 import { AuthService } from '../core/services/auth/auth.service';
 import { StateService } from '../core/services/ui/state.service';
-import { DynamicCardComponent } from './dynamic-card/dynamic-card.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 
 @NgModule({
     declarations: [
         ToolbarComponent,
-        SideNavComponent,
-        DynamicCardComponent
+        SideNavComponent
     ],
     imports: [
         CommonModule,
