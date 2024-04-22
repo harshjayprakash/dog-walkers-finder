@@ -15,6 +15,9 @@ export class ToolbarComponent {
     ) { }
 
     onAccountButtonClick(_event: any): void {
+        this.router.navigateByUrl(
+            (this.auth.isLoggedIn()) ? '/account' : '/authenticate'
+        );
     }
 
     onMenuButtonClick(_event: any): void {
