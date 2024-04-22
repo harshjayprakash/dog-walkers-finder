@@ -13,4 +13,13 @@ export class EditDogComponent {
     details?: string;
     special?: string;
 
+    constructor(
+        private router: Router,
+    ) {
+        if (router.url === '/dog/add') {
+            this.editMode = false;
+        } else {
+            this.editMode = true;
+        }
+    }
 }
