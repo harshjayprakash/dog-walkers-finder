@@ -6,4 +6,8 @@ export class DistanceService {
 
     constructor(private http: HttpClient) { }
 
-}
+    isValidPostalCode(postalCode: string) {
+
+    }
+};
+
