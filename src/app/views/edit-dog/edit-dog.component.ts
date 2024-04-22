@@ -45,8 +45,12 @@ export class EditDogComponent {
 
         this.id = formatDate(Date.now(), 'YYYYMMddTHHmmssSSS', this.locale.toString());
 
+        const userId = this.auth.getUserId();
+        if (userId === undefined) { return; }
+
         const dog: Dog = {
             id: this.id,
+            userid: userId,
             name: this.name || 'undefined',
             details: this.details || 'No Details Provided',
             special: this.special || 'No Details Provided'
