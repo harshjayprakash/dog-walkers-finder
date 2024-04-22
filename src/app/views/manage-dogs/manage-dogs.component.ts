@@ -9,8 +9,13 @@ export class ManageDogsComponent {
     elementData!: Dog[];
     constructor(
         private dogs: DogService,
-        private auth: AuthService,
-        private router: Router
-    ) {
+        this.dogs.getDogs().then(result => {
+            if (auth.getUserId() !== undefined) {
+                let dogList: Dog[] = result;
+                this.elementData = dogList.filter(
+                    dog => dog.userid === this.auth.getUserId()
+                );
+            }
+        }).catch(err => console.log('Failed to retrieve dogs: ', err))
     }
 }
