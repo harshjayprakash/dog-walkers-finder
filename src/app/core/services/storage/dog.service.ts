@@ -18,4 +18,8 @@ export class DogService extends DynamoService {
     async addDog(dog: Dog): Promise<any> {
         return await this.dynamoPut({ ...dog });
     }
+
+    async removeDog(dog: Dog): Promise<any> {
+        return await this.dynamoDel(dog.id);
+    }
 }
