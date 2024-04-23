@@ -52,13 +52,15 @@ export class EditDogComponent {
         else { this.addNewDog(); }
     }
 
-    addNewDog(): void {
-        if (this.name === undefined) {
-            alert('The name is required.');
-        }
+    removeButtonClick(_event: MouseEvent): void {
+        const dog: Dog | undefined = this.getDogDetails();
+        if (dog === undefined) { return; }
+        this.dogs.removeDog(dog);
+        this.goBack();
+    }
 
-        this.id = formatDate(Date.now(), 'YYYYMMddTHHmmssSSS', this.locale.toString());
-
+    getDogDetails(): Dog | undefined  {
+        if (this.id === undefined) { return; }
         const userId = this.auth.getUserId();
         if (userId === undefined) { return; }
 
@@ -70,12 +72,28 @@ export class EditDogComponent {
             special: this.special || 'No Details Provided'
         };
 
+        return dog;
+    }
+
+    addNewDog(): void {
+        if (this.name === undefined) {
+            alert('The name is required.');
+        }
+
+        this.id = formatDate(Date.now(), 'YYYYMMddTHHmmssSSS', this.locale.toString());
+
+        const dog: Dog | undefined = this.getDogDetails();
+        if (dog === undefined) { return; }
+
         this.dogs.addDog(dog);
         this.goBack();
     }
 
     updateExistingDog(): void {
+        const dog: Dog | undefined = this.getDogDetails();
+        if (dog === undefined) { return; }
 
+        this.dogs.addDog(dog);
+        this.goBack();
     }
-
 }
