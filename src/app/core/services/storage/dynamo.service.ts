@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { get, put } from "aws-amplify/api";
+import { del, get, put } from "aws-amplify/api";
 
 @Injectable()
 export class DynamoService {
@@ -27,6 +27,18 @@ export class DynamoService {
             console.log('[Dynamo Service] Amplify API PUT Succeeded: ', response);
         }
         catch (err) { console.log('[Dynamo Service] Amplify API PUT Failed: ', err); }
+    }
+
+    protected async dynamoDel(id: string): Promise<any> {
+        try {
+            const restOperation = await del({
+                apiName: this.apiDetails.apiName,
+                path: `${this.apiDetails.path}/${id}`
+            });
+            const response = await restOperation.response;
+            console.log('[Dynamo Service] Amplify API DEL Succeeded: ', response);
+        }
+        catch (err) { console.log('[Dynamo Service] Amplify API DEL Failed: ', err); }
     }
 }
 
