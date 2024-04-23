@@ -35,6 +35,12 @@
             }
         </button>
 
+        @if (editMode) {
+            <button mat-flat-button (click)="removeButtonClick($event)">
+                Remove
+            </button>
+        }
+
         <button mat-flat-button (click)="goBack()">
             Cancel
         </button>
