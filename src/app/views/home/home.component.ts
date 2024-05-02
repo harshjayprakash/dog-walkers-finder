@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DistanceService } from '../../core/services/logic/distance.service';
 import { DogService } from '../../core/services/storage/dog.service';
 import { UsersService } from '../../core/services/storage/users.service';
 
@@ -9,15 +10,22 @@ import { UsersService } from '../../core/services/storage/users.service';
 })
 export class HomeComponent {
 
-    constructor(private users: UsersService, private dogs: DogService) {}
+    constructor(
+        private users: UsersService,
+        private dogs: DogService,
+        private distance: DistanceService
+    ) {}
 
     onClick() {
-        this.users.getUsers().then(result => {
-            console.log(result);
-        }).catch(err => console.log(err));
-        this.dogs.getDogs().then(result => {
-            console.log(result);
-        }).catch(err => console.log(err));
+        let ret = this.distance.isValidPostCode("so158qz")
+            .subscribe(
+                result => {
+
+                },
+                error => {
+
+                }
+            )
     }
 
 }
