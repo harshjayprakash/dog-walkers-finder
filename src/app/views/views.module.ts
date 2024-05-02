@@ -13,6 +13,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { RouterModule, Routes } from '@angular/router';
 import { AmplifyAuthenticatorModule } from '@aws-amplify/ui-angular';
 import { authGuard } from '../core/guards/auth.guard';
+import { DistanceService } from '../core/services/logic/distance.service';
 import { DogService } from '../core/services/storage/dog.service';
 import { UsersService } from '../core/services/storage/users.service';
 import { AccountComponent } from './account/account.component';
@@ -91,6 +92,6 @@ export const VIEWS_MODULE_ROUTES: Routes = [
         AmplifyAuthenticatorModule
     ],
     exports: [RouterModule],
-    providers: [UsersService, DogService]
+    providers: [UsersService, DogService, DistanceService]
 })
 export class ViewsModule { }
