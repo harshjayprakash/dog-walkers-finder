@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../../core/services/auth/auth.service';
+import { DistanceService } from '../../core/services/logic/distance.service';
 
 @Component({
     selector: 'app-find-walkers',
@@ -8,6 +9,10 @@ import { AuthService } from '../../core/services/auth/auth.service';
 })
 export class FindWalkersComponent {
 
-    constructor (public auth: AuthService) { }
+    constructor (
+        public auth: AuthService,
+        private distance: DistanceService
+    ) {
+    }
 
 }
