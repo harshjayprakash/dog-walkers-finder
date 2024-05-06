@@ -50,3 +50,20 @@ export interface PostcodeApiValidity {
     status: number;
     result: boolean;
 }
+
+export interface PostcodeApiOutcode {
+    status: number;
+    result: {
+        outcode: string;
+        longitude: number | null;
+        latitude: number | null;
+        northings: number;
+        eastings: number;
+        admin_district: string[];
+        parish: string[];
+        admin_county: string[];
+        admin_ward: string[];
+        country: string[];
+        parliamentary_constituency: string[];
+    }
+}
