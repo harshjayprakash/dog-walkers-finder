@@ -43,15 +43,5 @@ export class DistanceService {
         return response.json() as Promise<PostcodeApiBulkReverseGeocoding>;
     }
 
-    // getPostClosePostalCodes(longitude: number, latitude: number, radius: number) {
-    //     return this.http.post(`https://api.postcodes.io/postcodes`, {
-    //         geolocations: [{
-    //             longitude: longitude,
-    //             latitude: latitude,
-    //             radius: radius
-    //         }]
-    //     });
-    // }
-
 };
 
