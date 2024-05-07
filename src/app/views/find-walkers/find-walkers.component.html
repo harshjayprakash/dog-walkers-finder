@@ -8,15 +8,30 @@
 }
 
 <br/>
+<p>Your current postal code is: {{ currentPostalCode$ }}</p>
+
+<br/>
 
 <section class="search">
     <mat-form-field>
         <mat-label>Maximum Distance in Miles</mat-label>
-        <input type="number" matInput>
+        <input type="number" matInput name="distanceSearch" [(ngModel)]="searchDistance">
     </mat-form-field>
     <span class="spacer"></span>
-    <button mat-fab color="accent">
+    <button mat-fab color="accent" (click)="onSearchClick()">
         <mat-icon>search</mat-icon>
     </button>
+</section>
+
+<section class="dog-walker-list">
+    <p [hidden]="!noWalkersFound$">No Dog Walkers Found</p>
+    @for (dogwalker of dogWalkersList$; track dogWalkersList$) {
+        <mat-card>
+            <mat-card-content>
+                <p>{{ dogwalker.username }}</p>
+                <p>{{ dogwalker.address }}</p>
+            </mat-card-content>
+        </mat-card>
+    }
 </section>
 
