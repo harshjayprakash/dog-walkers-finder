@@ -1,24 +1,57 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, tap, throwError } from 'rxjs';
-import { PostcodeApiValidity } from '../../model/postcode';
+import { PostcodeApiBulkReverseGeocoding, PostcodeApiResponse, PostcodeApiValidity } from '../../model/postcode';
 
 @Injectable()
 export class DistanceService {
 
-    constructor(private http: HttpClient) { }
+    constructor() { }
 
-    isValidPostCode(postalCode: string) {
-        return this.http.get<PostcodeApiValidity>(`https://api.postcodes.io/postcodes/${postalCode}/validate`)
-            .pipe(
-                tap(result => {
-
-                }),
-                catchError(error => {
-                    return throwError(() => error);
-                })
-            )
-
+    async isValidPostCode(postalCode: string): Promise<PostcodeApiValidity> {
+        const response = await fetch(
+            `https://api.postcodes.io/postcodes/${postalCode}/validate`,
+            {
+                method: 'GET',
+                headers: { 'Content-Type': 'application/json' },
+            }
+        );
+        return await response.json() as Promise<PostcodeApiValidity>;
     }
+
+    async getPostCodeInformation(postalCode: string): Promise<PostcodeApiResponse> {
+        const response = await fetch(
+            `https://api.postcodes.io/postcodes/${postalCode}/`
+        );
+        return await response.json() as Promise<PostcodeApiResponse>;
+    }
+
+    async getNearestPostCodes(long: number, lat: number, radius: number): Promise<PostcodeApiBulkReverseGeocoding> {
+        const response = await fetch(
+            'https://api.postcodes.io/postcodes',
+            {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    "geolocations": [{
+                        "longitude": long,
+                        "latitude": lat,
+                        "radius": radius
+                    }]
+                })
+            }
+        )
+
+        return response.json() as Promise<PostcodeApiBulkReverseGeocoding>;
+    }
+
+    // getPostClosePostalCodes(longitude: number, latitude: number, radius: number) {
+    //     return this.http.post(`https://api.postcodes.io/postcodes`, {
+    //         geolocations: [{
+    //             longitude: longitude,
+    //             latitude: latitude,
+    //             radius: radius
+    //         }]
+    //     });
+    // }
+
 };
 
