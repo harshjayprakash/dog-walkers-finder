@@ -1,5 +1,6 @@
 <amplify-authenticator>
     <ng-template amplifySlot="authenticated" let-user="user" let-signOut="signOut">
-        <p>Authenticated. Please click <a class="link" (click)="reload()">here</a> to be redirected to the account page.</p>
+        <p>Authenticated.</p>
+        <button mat-stroked-button (click)="reload()">Reload</button>
     </ng-template>
 </amplify-authenticator>

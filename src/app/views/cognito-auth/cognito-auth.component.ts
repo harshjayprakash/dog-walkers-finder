@@ -12,7 +12,7 @@ export class CognitoAuthComponent {
 
     reload() {
         window.location.reload();
-        this.router.navigateByUrl('/account');
+        window.location.replace('/account');
     }
 
 }
