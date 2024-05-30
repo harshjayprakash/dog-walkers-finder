@@ -38,3 +38,9 @@ This process has not be tested.
 ## Local Deployment
 
 To run the application, locally download all the packages using `npm install` and `amplify init`, then to start running the application run `ng serve --open`, which will open your default web browser at `localhost:4200`.
+
+## Limitations and Known Issues
+
+- You must be logged in to access the 'Manage Dogs' page.
+- The 'Find Walkers' page will not function unless you are logged in and provided a valid postalcode on your account.
+- Logging in Reload Problem: To log in click the person icon. Once logged in click the reload button. Then click the account "person" icon.
