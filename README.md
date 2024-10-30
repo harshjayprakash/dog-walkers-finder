@@ -1,3 +1,5 @@
+![Banner](banner.png)
+
 # Waqq.ly - A dog walker service
 
 > A prototype web application providing a service for dog owners to find dog walkers within their local area.
