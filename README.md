@@ -8,6 +8,8 @@ The "Dog Walker Finder" application for dog owners to find dog walkers within th
 area (distance specified). The scenario states that the this application will be created
 by a small startup focused on using the cloud's scalable services. This is an assignment
 from the module BS3928 Cloud Computing and Infrastructure at the University of Winchester.
+The hand-in date for this assignment was Friday, the 24th of May 2024. **Futher**
+**development of this application will not be pursued.**
 
 ## Original Requirements
 
