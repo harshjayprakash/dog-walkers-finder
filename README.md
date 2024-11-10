@@ -53,7 +53,7 @@ ng serve --open
 
 > [!NOTE]
 > Please note that this application was developed with Angular 17.3 with non standalone
-> components. It has not been tested with the updated Angular 18 after upgrading.
+> components. It has not been tested fully with the updated Angular 18 after upgrading.
 
 Upon loading the application, the home page is shown (a blank page with "Waqq.ly" and "a
 dog walkers application"). The basic scaffolding of the application contains a header
