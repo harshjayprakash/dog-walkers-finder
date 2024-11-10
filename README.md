@@ -13,6 +13,32 @@ from the module BS3928 Cloud Computing and Infrastructure at the University of W
 
 ## Deployment
 
+```sh
+# Setup your AWS Profile Configuration, if you haven't already.
+amplify configure
+# Initialise project with amplify, specifing your AWS Profile.
+amplify init
+# Upload the stack to your AWS Account
+amplify publish
+```
+
+Please note that these deployment steps have not been validated for functionality and may
+fail.
+
+## Local Deployment
+
+The application requires amplify to be setup with the functions, storage and
+authentication for functionality.
+
+```sh
+# Install packages
+npm install
+# Initialise project with Amplify
+amplify init
+# Run application. This will open your default web browser on localhost:4200.
+ng serve --open
+```
+
 ## Usage
 
 
