@@ -4,7 +4,10 @@
 
 ## Overview
 
-The "Dog Walker Finder" application is an application for dog owners to find dog walkers within their local area (distance specified )
+The "Dog Walker Finder" application for dog owners to find dog walkers within their local
+area (distance specified). The scenario states that the this application will be created
+by a small startup focused on using the cloud's scalable services. This is an assignment
+from the module BS3928 Cloud Computing and Infrastructure at the University of Winchester.
 
 ## Original Requirements
 
