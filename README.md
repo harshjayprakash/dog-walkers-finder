@@ -17,7 +17,9 @@ The hand-in date for this assignment was Friday, the 24th of May 2024. **Further
 walker.
 * Users should be able to add their dogs to their account.
 * The application should allow users to edit their account and dog information.
-* 
+* Users should be able to search for dog walkers in their local area based on postalcode
+and distance provided.
+* THe application must make use of the cloud.
 
 ## Deployment
 
@@ -48,6 +50,10 @@ ng serve --open
 ```
 
 ## Usage
+
+> [!NOTE]
+> Please note that this application was developed with Angular 17.3 with non standalone
+> components. It has not been tested with the updated Angular 18 after upgrading.
 
 Upon loading the application, the home page is shown (a blank page with "Waqq.ly" and "a
 dog walkers application"). The basic scaffolding of the application contains a header
