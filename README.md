@@ -8,10 +8,16 @@ The "Dog Walker Finder" application for dog owners to find dog walkers within th
 area (distance specified). The scenario states that the this application will be created
 by a small startup focused on using the cloud's scalable services. This is an assignment
 from the module BS3928 Cloud Computing and Infrastructure at the University of Winchester.
-The hand-in date for this assignment was Friday, the 24th of May 2024. **Futher**
+The hand-in date for this assignment was Friday, the 24th of May 2024. **Further**
 **development of this application will not be pursued.**
 
 ## Original Requirements
+
+* The application has the ability to create accounts and optionally register as a dog
+walker.
+* Users should be able to add their dogs to their account.
+* The application should allow users to edit their account and dog information.
+* 
 
 ## Deployment
 
@@ -59,6 +65,16 @@ A logged-in user will be given additional options, such as registering as a dog 
 adding their dogs to the system.
 
 ![Login Page](./doc/dwf-login.PNG)
+
+## Known Issues and Limitations
+
+* Access to the 'Manage Dogs' page requies active user login status. Without active login,
+the button will not direct to the page.
+* The functionality for searching nearby walkers is dependant on providing a valid
+postalcode upon account creation or within an edit profile section. This postalcode
+must not have any spaces.
+* Users may encouter issues with logging in. Reloading is required after logon to refresh
+application state.
 
 ## Font Hosting
 
