@@ -6,9 +6,12 @@
 
 The "Dog Walker Finder" application is an application for dog owners to find dog walkers within their local area (distance specified )
 
+## Original Requirements
+
+## Deployment
+
 ## Usage
 
-![Home Page](./doc/dwf-home.PNG)
 
 ![Find Page](./doc/dwf-find.PNG)
 
