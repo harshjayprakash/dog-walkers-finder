@@ -43,9 +43,25 @@ ng serve --open
 
 Upon loading the application, the home page is shown (a blank page with "Waqq.ly" and "a
 dog walkers application"). The basic scaffolding of the application contains a header
-toolbar with a static application title
+toolbar with a static application title and an account manager button. The sidebar
+navigation automatically adapts to mobile device, add a button to show or hide the panel
+in the header.
+
+Below shows the find dog walker page where the postal code is from the account holder and
+the user can change the radial distance of the dog walkers search.
 
 ![Find Page](./doc/dwf-find.PNG)
+
+The account button shows either the login page or the account page if already logged in.
+A logged-in user will be given additional options, such as registering as a dog walker and
+adding their dogs to the system.
+
+![Login Page](./doc/dwf-login.PNG)
+
+## Font Hosting
+
+The application uses the Roboto font from Google Fonts. _This is not compliant with GDPR._
+_If this was a production application, an alternative method would have to be used._
 
 ## References
 
@@ -56,4 +72,3 @@ toolbar with a static application title
 * AWS Amplify: <https://aws.amazon.com/amplify/>
 * Angular: <https://angular.dev/>
 * Postcode.io (under MIT): <https://github.com/ideal-postcodes/postcodes.io/>
-
