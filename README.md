@@ -41,6 +41,9 @@ ng serve --open
 
 ## Usage
 
+Upon loading the application, the home page is shown (a blank page with "Waqq.ly" and "a
+dog walkers application"). The basic scaffolding of the application contains a header
+toolbar with a static application title
 
 ![Find Page](./doc/dwf-find.PNG)
 
@@ -52,3 +55,5 @@ ng serve --open
 * AWS Amplify Angular UI (under Apache 2.0): <https://github.com/aws-amplify/amplify-ui>
 * AWS Amplify: <https://aws.amazon.com/amplify/>
 * Angular: <https://angular.dev/>
+* Postcode.io (under MIT): <https://github.com/ideal-postcodes/postcodes.io/>
+
