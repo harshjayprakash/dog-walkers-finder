@@ -1,48 +1,22 @@
-![Banner](banner.png)
+# Dog Walker Finder (Waqqly)
 
-# Waqq.ly - A dog walker service
+![Banner (Decorative)](./doc/dwf-banner.png)
 
-> A prototype web application providing a service for dog owners to find dog walkers within their local area.
+## Overview
 
-This code was submitted as part of an summative assignment.
+The "Dog Walker Finder" application is an application for dog owners to find dog walkers within their local area (distance specified )
 
-- Submitted: May 2024
-- Module: BS3928 Cloud Computing and Infrastructure
-- Course: BSc (Hons) Computer Science
+## Usage
 
-This web application is written in Angular 17.3 (with non-standalone components) in a serverless manner, making use of AWS Amplify API to access AWS Services used within this application (DynamoDB through Lambda through API Gateway; Cognito).
+![Home Page](./doc/dwf-home.PNG)
 
-## Functionality
+![Find Page](./doc/dwf-find.PNG)
 
-- Ability to create an account, register as a dog walker.
-- Ability to add dogs to your account.
-- Ability to search for dog walkers in your local area (based on the postalcode provided, and distance provided)
-- Ability to edit account information and dog information.
+## References
 
-Please note that the postalcode should not have any spaces.
-
-## Deployment
-
-- Requires Node Version 18.13
-- Requires TypeScript Version 5.2 to 5.4
-- Requires RxJS Version 6.5.3
-- Correctly configured AWS IAM Roles
-
-To deploy the application
-
-1. Use `amplify configure` to setup your AWS profile configuration.
-1. Delete `team-provider-info.json` from the amplify directory.
-1. Run `amplify init` specifying your AWS profile.
-1. Use `amplify push` to upload the stack to your AWS account.
-
-This process has not be tested.
-
-## Local Deployment
-
-To run the application, locally download all the packages using `npm install` and `amplify init`, then to start running the application run `ng serve --open`, which will open your default web browser at `localhost:4200`.
-
-## Limitations and Known Issues
-
-- You must be logged in to access the 'Manage Dogs' page.
-- The 'Find Walkers' page will not function unless you are logged in and provided a valid postalcode on your account.
-- Logging in Reload Problem: To log in click the person icon. Once logged in click the reload button. Then click the account "person" icon.
+* Angular (under MIT): <https://github.com/angular/angular>
+* Angular Material (under MIT): <https://github.com/angular/components>
+* AWS Amplify Package (under Apache 2.0): <https://github.com/aws-amplify/amplify-js?tab=readme-ov-file>
+* AWS Amplify Angular UI (under Apache 2.0): <https://github.com/aws-amplify/amplify-ui>
+* AWS Amplify: <https://aws.amazon.com/amplify/>
+* Angular: <https://angular.dev/>
